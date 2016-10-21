@@ -15,8 +15,10 @@
 			$math_417=$_POST["math_417"];
 			$math_418=$_POST["math_418"];
 			$cgpa=((mark_for_100($math_401)+mark_for_100($math_403)+mark_for_100($math_405)+mark_for_100($math_406)+mark_for_100($math_407)+mark_for_100($math_408)+mark_for_100($math_409)+mark_for_100($math_418))*4+(mark_for_75($math_402)+mark_for_75($math_404))*3+mark_for_50($math_416)*2.0+mark_for_50($math_417)*2.0)/42;
-			
-			 echo "You have got CGPA: ". round($cgpa,2);
+			$cgpa_round=round($cgpa,2);
+			  // echo "You have got CGPA: ". $cgpa_round;
+			 return $cgpa_round;
+			 return true;
 		}	
 	}
 

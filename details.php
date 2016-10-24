@@ -1,6 +1,6 @@
 <?php 
 	require_once './db_connection.php';
-	if (isset($_GET['id'])) {
+	if (isset($_GET['year_name'])) {
 		$id=base64_decode($_GET['id']);
 		$year_name=($_GET['year_name']);
 		$sql="select * from ". $year_name ." where id='$id'";
@@ -137,51 +137,51 @@
 							</tr>
 							<tr>
 								<td>401</td>
-								<td>$math_401</td>
+								<td><?php echo($math_401); ?></td>
 							</tr>
 							<tr>
 								<td>402</td>
-								<td>$math_402</td>
+								<td><?php echo($math_402); ?></td>
 							</tr>
 							<tr>
 								<td>403</td>
-								<td>$math_403</td>
+								<td><?php echo($math_403); ?></td>
 							</tr>
 							<tr>
 								<td>404</td>
-								<td>$math_404</td>
+								<td><?php echo($math_404); ?></td>
 							</tr>
 							<tr>
 								<td>411</td>
-								<td>$math_411</td>
+								<td><?php echo($math_411); ?></td>
 							</tr>
 							<tr>
 								<td>412</td>
-								<td>$math_412</td>
+								<td><?php echo($math_412); ?></td>
 							</tr>
 							<tr>
 								<td>413</td>
-								<td>$math_413</td>
+								<td><?php echo($math_413); ?></td>
 							</tr>
 							<tr>
 								<td>414</td>
-								<td>$math_414</td>
+								<td><?php echo($math_414); ?></td>
 							</tr>
 							<tr>
 								<td>415</td>
-								<td>$math_415</td>
+								<td><?php echo($math_415); ?></td>
 							</tr>
 							<tr>
 								<td>416</td>
-								<td>$math_416</td>
+								<td><?php echo($math_416); ?></td>
 							</tr>
 							<tr>
 								<td>417</td>
-								<td>$math_417</td>
+								<td><?php echo($math_417); ?></td>
 							</tr>
 							<tr>
 								<td>418</td>
-								<td>$math_418</td>
+								<td><?php echo($math_418); ?></td>
 							</tr>
 						</table>
 
@@ -223,114 +223,60 @@
 				<div class="row" >
 					<div class="col-md-10 col-md-offset-1 " id="form_area"\>
 				
-						<form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET">
-						<div class="row form_head" >
-							 <div class="col-sm-6">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">Input Roll</span>
-								  <input type="text" name="roll" value="<?php echo $res['roll'] ?>" maxlength="8"  class="form-control" aria-describedby="sizing-addon2" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4 col-sm-offset-1">
-								<?php 
-									echo "<div class=\"result_area\">"."Result:  ". $res['cgpa']."</div>";
-								 ?>
-							 </div>
-						</div>
-						<hr>
-						<div class="row">
-						 	<div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">301</span>
-								  <input type="number" name="math_301" value="<?php echo $res['math_301'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">302</span>
-								  <input type="number" name="math_302" value="<?php echo $res['math_302'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">303</span>
-								  <input type="number" name="math_303" value="<?php echo $res['math_303'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-							
-							<div class="row">
-							 	<div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">304</span>
-									  <input type="number" name="math_304" value="<?php echo $res['math_304'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-							 	</div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">305</span>
-									  <input type="number" name="math_305" value="<?php echo $res['math_305'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">306</span>
-									  <input type="number" name="math_306" value="<?php echo $res['math_306'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								 	</div>
-							 	</div>
-							 </div> <!-- End Row -->
-							 <hr>
-							
-							<div class="row">
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">307</span>
-									  <input type="number" name="math_307" value="<?php echo $res['math_307'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">308</span>
-									  <input type="number" name="math_308" value="<?php echo $res['math_308'] ?>"  min="0" max="75" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">309</span>
-									  <input type="number" name="math_309" value="<?php echo $res['math_309'] ?>"  min="0" max="75" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-
-							 <div class="row">
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">310</span>
-									  <input type="number" name="math_310" value="<?php echo $res['math_310'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">311</span>
-									  <input type="number" name="math_311" value="<?php echo $res['math_311'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">312</span>
-									  <input type="number" name="math_312" value="<?php echo $res['math_312'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-							 <div class="row">
-							 	<div class="col-sm-2 col-sm-offset-10 ">
-							 		<button type="submit" name="submit" class="btn btn-info">Submit</button>
-							 	</div>
-							 </div>
-						 </form>
+						<table class="table table-bordered">
+							<tr>
+								<th>Course No.</th>
+								<th>Marks</th>
+							</tr>
+							<tr>
+								<td>301</td>
+								<td><?php echo($math_301); ?></td>
+							</tr>
+							<tr>
+								<td>302</td>
+								<td><?php echo($math_302); ?></td>
+							</tr>
+							<tr>
+								<td>303</td>
+								<td><?php echo($math_303); ?></td>
+							</tr>
+							<tr>
+								<td>304</td>
+								<td><?php echo($math_304); ?></td>
+							</tr>
+							<tr>
+								<td>305</td>
+								<td><?php echo($math_305); ?></td>
+							</tr>
+							<tr>
+								<td>306</td>
+								<td><?php echo($math_306); ?></td>
+							</tr>
+							<tr>
+								<td>307</td>
+								<td><?php echo($math_307); ?></td>
+							</tr>
+							<tr>
+								<td>308</td>
+								<td><?php echo($math_308); ?></td>
+							</tr>
+							<tr>
+								<td>309</td>
+								<td><?php echo($math_309); ?></td>
+							</tr>
+							<tr>
+								<td>310</td>
+								<td><?php echo($math_310); ?></td>
+							</tr>
+							<tr>
+								<td>311</td>
+								<td><?php echo($math_311); ?></td>
+							</tr>
+							<tr>
+								<td>312</td>
+								<td><?php echo($math_312); ?></td>
+							</tr>
+						</table>
 
 						</div>
 
@@ -366,111 +312,56 @@
 				<div class="row" >
 					<div class="col-md-10 col-md-offset-1 " id="form_area"\>
 				
-						<form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET">
-						<div class="row form_head" >
-							 <div class="col-sm-6">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">Input Roll</span>
-								  <input type="text" name="roll" value="<?php echo $res['roll'] ?>" maxlength="8"  class="form-control" aria-describedby="sizing-addon2" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4 col-sm-offset-1">
-								<?php 
-									echo "<div class=\"result_area\">"."Result:  ". $res['cgpa']."</div>";
-								 ?>
-							 </div>
-						</div>
-						<hr>
-						<div class="row">
-						 	<div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">201</span>
-								  <input type="number" name="math_201" value="<?php echo $res['math_201'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">202</span>
-								  <input type="number" name="math_202" value="<?php echo $res['math_202'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">203</span>
-								  <input type="number" name="math_203" value="<?php echo $res['math_203'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-							
-							<div class="row">
-							 	<div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">204</span>
-									  <input type="number" name="math_204" value="<?php echo $res['math_204'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-							 	</div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">205</span>
-									  <input type="number" name="math_205" value="<?php echo $res['math_205'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">206</span>
-									  <input type="number" name="math_206" value="<?php echo $res['math_206'] ?>"  min="0" max="75" class="form-control" placeholder="" required>
-								 	</div>
-							 	</div>
-							 </div> <!-- End Row -->
-							 <hr>
-							
-							<div class="row">
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">207</span>
-									  <input type="number" name="math_207" value="<?php echo $res['math_207'] ?>"  min="0" max="75" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">208</span>
-									  <input type="number" name="math_208" value="<?php echo $res['math_208'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">209</span>
-									  <input type="number" name="math_209" value="<?php echo $res['math_209'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-
-							 <div class="row">
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">210</span>
-									  <input type="number" name="math_210" value="<?php echo $res['math_210'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">211</span>
-									  <input type="number" name="math_211" value="<?php echo $res['math_211'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-
-								 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-							 <div class="row">
-							 	<div class="col-sm-2 col-sm-offset-10 ">
-							 		<button type="submit" name="submit" class="btn btn-info">Submit</button>
-							 	</div>
-							 </div>
-						 </form>
+						<table class="table table-bordered">
+							<tr>
+								<th>Course No.</th>
+								<th>Marks</th>
+							</tr>
+							<tr>
+								<td>201</td>
+								<td><?php echo($math_201); ?></td>
+							</tr>
+							<tr>
+								<td>202</td>
+								<td><?php echo($math_202); ?></td>
+							</tr>
+							<tr>
+								<td>203</td>
+								<td><?php echo($math_203); ?></td>
+							</tr>
+							<tr>
+								<td>204</td>
+								<td><?php echo($math_204); ?></td>
+							</tr>
+							<tr>
+								<td>205</td>
+								<td><?php echo($math_205); ?></td>
+							</tr>
+							<tr>
+								<td>206</td>
+								<td><?php echo($math_206); ?></td>
+							</tr>
+							<tr>
+								<td>207</td>
+								<td><?php echo($math_207); ?></td>
+							</tr>
+							<tr>
+								<td>208</td>
+								<td><?php echo($math_208); ?></td>
+							</tr>
+							<tr>
+								<td>209</td>
+								<td><?php echo($math_209); ?></td>
+							</tr>
+							<tr>
+								<td>210</td>
+								<td><?php echo($math_210); ?></td>
+							</tr>
+							<tr>
+								<td>211</td>
+								<td><?php echo($math_211); ?></td>
+							</tr>
+						</table>
 
 						</div>
 
@@ -508,114 +399,60 @@
 				<div class="row" >
 					<div class="col-md-10 col-md-offset-1 " id="form_area"\>
 				
-						<form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET">
-						<div class="row form_head" >
-							 <div class="col-sm-6">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">Input Roll</span>
-								  <input type="text" name="roll" value="<?php echo $res['roll'] ?>" maxlength="8"  class="form-control" aria-describedby="sizing-addon2" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4 col-sm-offset-1">
-								<?php 
-									echo "<div class=\"result_area\">"."Result:  ". $res['cgpa']."</div>";
-								 ?>
-							 </div>
-						</div>
-						<hr>
-						<div class="row">
-						 	<div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">101</span>
-								  <input type="number" name="math_101" value="<?php echo $res['math_101'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">102</span>
-								  <input type="number" name="math_102" value="<?php echo $res['math_102'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 <div class="col-sm-4">
-							 	<div class="input-group">
-								  <span class="input-group-addon" id="sizing-addon2">103</span>
-								  <input type="number" name="math_103" value="<?php echo $res['math_103'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-								</div>
-							 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-							
-							<div class="row">
-							 	<div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">104</span>
-									  <input type="number" name="math_104" value="<?php echo $res['math_104'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-							 	</div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">105</span>
-									  <input type="number" name="math_105" value="<?php echo $res['math_105'] ?>"  min="0" max="75" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">106</span>
-									  <input type="number" name="math_106" value="<?php echo $res['math_106'] ?>"  min="0" max="75" class="form-control" placeholder="" required>
-								 	</div>
-							 	</div>
-							 </div> <!-- End Row -->
-							 <hr>
-							
-							<div class="row">
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">107</span>
-									  <input type="number" name="math_107" value="<?php echo $res['math_107'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">108</span>
-									  <input type="number" name="math_108" value="<?php echo $res['math_108'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">109</span>
-									  <input type="number" name="math_109" value="<?php echo $res['math_109'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-
-							 <div class="row">
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">110</span>
-									  <input type="number" name="math_110" value="<?php echo $res['math_110'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">111</span>
-									  <input type="number" name="math_111" value="<?php echo $res['math_111'] ?>"  min="0" max="100" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-								 <div class="col-sm-4">
-								 	<div class="input-group">
-									  <span class="input-group-addon" id="sizing-addon2">112</span>
-									  <input type="number" name="math_112" value="<?php echo $res['math_112'] ?>"  min="0" max="50" class="form-control" placeholder="" required>
-									</div>
-								 </div>
-							 </div> <!-- End Row -->
-							 <hr>
-							 <div class="row">
-							 	<div class="col-sm-2 col-sm-offset-10 ">
-							 		<button type="submit" name="submit" class="btn btn-info">Submit</button>
-							 	</div>
-							 </div>
-						 </form>
+						<table class="table table-bordered">
+							<tr>
+								<th>Course No.</th>
+								<th>Marks</th>
+							</tr>
+							<tr>
+								<td>101</td>
+								<td><?php echo($math_101); ?></td>
+							</tr>
+							<tr>
+								<td>102</td>
+								<td><?php echo($math_102); ?></td>
+							</tr>
+							<tr>
+								<td>103</td>
+								<td><?php echo($math_103); ?></td>
+							</tr>
+							<tr>
+								<td>104</td>
+								<td><?php echo($math_104); ?></td>
+							</tr>
+							<tr>
+								<td>105</td>
+								<td><?php echo($math_105); ?></td>
+							</tr>
+							<tr>
+								<td>106</td>
+								<td><?php echo($math_106); ?></td>
+							</tr>
+							<tr>
+								<td>107</td>
+								<td><?php echo($math_107); ?></td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><?php echo($math_10); ?></td>
+							</tr>
+							<tr>
+								<td>309</td>
+								<td><?php echo($math_309); ?></td>
+							</tr>
+							<tr>
+								<td>110</td>
+								<td><?php echo($math_110); ?></td>
+							</tr>
+							<tr>
+								<td>311</td>
+								<td><?php echo($math_311); ?></td>
+							</tr>
+							<tr>
+								<td>112</td>
+								<td><?php echo($math_112); ?></td>
+							</tr>
+						</table>
 
 						</div>
 

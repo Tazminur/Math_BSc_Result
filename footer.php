@@ -20,11 +20,6 @@ $(document).ready(function(){
 	   	e.preventDefault();
 	    $('#signin-taba').tab('show');
 	});
-	    	
-	$(document).on('click','.forgetpass-tab',function(e){
-	 	e.preventDefault();
-	   	$('#forgetpass-taba').tab('show');
-	});
 });	
 </script>
 

@@ -29,7 +29,7 @@
     	<div class="modal-content login-modal">
       		<div class="modal-header login-modal-header">
         		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h4 class="modal-title text-center" id="loginModalLabel">USER AUTHENTICATION</h4>
+        		<h4 class="modal-title text-center" id="loginModalLabel">Admin AUTHENTICATION</h4>
       		</div>
       		<div class="modal-body" style="padding-bottom:40px">
       			<div class="text-center">
@@ -47,7 +47,7 @@
 					    		&nbsp;&nbsp;
 					    		<span id="login_fail" class="response_error" style="display: none;">Loggin failed, please try again.</span>
 					    		<div class="clearfix"></div>
-					    		<form>
+					    		<form method="post" action="index.php">
 									<div class="form-group">
 								    	<div class="input-group">
 								      		<div class="input-group-addon"><i class="fa fa-user"></i></div>
@@ -62,7 +62,7 @@
 								    	</div>
 								    	<span class="help-block has-error" id="password-error"></span>
 								  	</div>
-						  			<button type="button" id="login_btn" class="btn btn-block bt-login" data-loading-text="Signing In....">Login</button>
+						  			<input type="submit" id="login_btn" class="btn btn-block bt-login" data-loading-text="Signing In...." value="Submit">
 						  			<div class="clearfix"></div>
 								</form>
 					    	</div>

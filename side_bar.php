@@ -6,6 +6,7 @@
 <!-- SIDE BAR -->
 			<div class="col-md-3 col-sm-3 side_bar">
 				<ul class="nav nav-pills nav-stacked">
+					<li><a class="btn btn-launch" href="javascript:;" data-toggle="modal" data-target="#loginModal">Login</a></li>
 					<li><a href="index.php">Create Result</a></li>
 					<li>
 						<div class="dropdown">

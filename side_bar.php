@@ -6,10 +6,11 @@
 <!-- SIDE BAR -->
 			<div class="col-md-3 col-sm-3 side_bar">
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="index.php">Create Result</a></li>
+					<li><a class="btn btn-launch text-center" href="javascript:;" data-toggle="modal" data-target="#loginModal">Login</a></li>
+					<li class="text-center"><a href="index.php">Create Result</a></li>
 					<li>
 						<div class="dropdown">
-						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						  <button class="btn btn-launch dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 						    View Result
 						    <span class="caret"></span>
 						  </button>
